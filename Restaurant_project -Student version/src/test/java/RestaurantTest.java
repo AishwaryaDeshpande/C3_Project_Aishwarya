@@ -103,6 +103,7 @@ class RestaurantTest {
         items.add("Vegetable lasagne");
 
         int OrderValue = restaurant.getOrderValue(items);
+        assertEquals(388,OrderValue);
     }
 
 }
