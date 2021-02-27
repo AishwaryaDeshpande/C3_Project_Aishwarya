@@ -90,4 +90,19 @@ class RestaurantTest {
     //TDD
     //need to return order value given the name of the items in the string format
 
+    @Test
+    public void return_the_order_value_of_the_given_items_in_string(){
+        restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
+        restaurant.addToMenu("Sweet corn soup",119);
+        restaurant.addToMenu("Vegetable lasagne", 269);
+        restaurant.addToMenu("Pasta", 200);
+
+        List<String> items = new ArrayList<>();
+
+        items.add("Sweet corn soup");
+        items.add("Vegetable lasagne");
+
+        int OrderValue = restaurant.getOrderValue(items);
+    }
+
 }
